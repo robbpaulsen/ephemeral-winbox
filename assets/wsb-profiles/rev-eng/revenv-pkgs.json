@@ -1,0 +1,111 @@
+{
+	"$schema": "https://aka.ms/winget-packages.schema.2.0.json",
+	"CreationDate": "2025-02-08T00:27:45.224-00:00",
+	"Sources": [
+		{
+			"Packages": [
+				{
+					"PackageIdentifier": "7zip.7zip"
+				},
+				{
+					"PackageIdentifier": "Microsoft.Sysinternals"
+				},
+				{
+					"PackageProvider": "uutils.coreutils"
+				},
+				{
+					"PackageProvider": "magic-wormhole.magic-wormhole"
+				},
+				{
+					"PackageIdentifier": "Microsoft.PowerShell"
+				},
+				{
+					"PackageIdentifier": "GnuWin32.UnZip"
+				},
+				{
+					"PackageIdentifier": "Python.Launcher"
+				},
+				{
+					"PackageIdentifier": "BurntSushi.ripgrep.MSVC"
+				},
+				{
+					"PackageIdentifier": "JernejSimoncic.Wget"
+				},
+				{
+					"PackageIdentifier": "Microsoft.NuGet"
+				},
+				{
+					"PackageIdentifier": "JanDeDobbeleer.OhMyPosh"
+				},
+				{
+					"PackageIdentifier": "UPX.UPX"
+				},
+				{
+					"PackageIdentifier": "WinMerge.WinMerge"
+				},
+				{
+					"PackageIdentifier": "ajeetdsouza.zoxide"
+				},
+				{
+					"PackageIdentifier": "JanDeDobbeleer.Aliae"
+				},
+				{
+					"PackageIdentifier": "bootandy.dust"
+				},
+				{
+					"PackageIdentifier": "charmbracelet.glow"
+				},
+				{
+					"PackageIdentifier": " Rizin.Cutter"
+				},
+				{
+					"PackageIdentifier": "jftuga.less"
+				},
+				{
+					"PackageIdentifier": "jqlang.jq"
+				},
+				{
+					"PackageIdentifier": "lsd-rs.lsd"
+				},
+				{
+					"PackageIdentifier": "sharkdp.bat"
+				},
+				{
+					"PackageIdentifier": "sharkdp.fd"
+				},
+				{
+					"PackageIdentifier": "Microsoft.VisualStudioCode"
+				},
+				{
+					"PackageIdentifier": "Python.Python.3.12"
+				},
+				{
+					"PackageIdentifier": "Microsoft.AppInstaller"
+				},
+				{
+					"PackageIdentifier": "Microsoft.WindowsTerminal.Preview"
+				}
+			],
+			"SourceDetails": {
+				"Argument": "https://cdn.winget.microsoft.com/cache",
+				"Identifier": "Microsoft.Winget.Source_8wekyb3d8bbwe",
+				"Name": "winget",
+				"Type": "Microsoft.PreIndexed.Package"
+			}
+		},
+		{
+			"Packages": [
+				{
+					"PackageIdentifier": "9NM816CZGB9C"
+				}
+			],
+			"SourceDetails": {
+				"Argument": "https://storeedgefd.dsx.mp.microsoft.com/v9.0",
+				"Identifier": "StoreEdgeFD",
+				"Name": "msstore",
+				"Type": "Microsoft.Rest"
+			}
+		}
+	],
+	"WinGetVersion": "1.9.25200"
+}

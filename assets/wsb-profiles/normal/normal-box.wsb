@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Configuration>
+    <!-- vGPU Configuration -->
+    <vGPU>default</vGPU>
+
+    <!-- Networking Options -->
+    <Networking>default</Networking>
+
+    <!-- Mapped Folders Configuration -->
+    <MappedFolders>
+        <MappedFolder>
+            <HostFolder>$env:TEMP\sanbox</HostFolder>
+            <SandboxFolder>$env:USERPROFILE\Documents</SandboxFolder>
+            <ReadOnly>false</ReadOnly>
+        </MappedFolder>
+        <MappedFolder>
+            <HostFolder>$env:TEMP\SandboxScripts</HostFolder>
+            <SandboxFolder>$env:USERPROFILE\Documents\SandboxScripts</SandboxFolder>
+            <ReadOnly>false</ReadOnly>
+        </MappedFolder>
+    </MappedFolders>
+
+    <!-- Logon Command Configuration -->
+    <LogonCommand>
+        <Command>$env:USERPROFILE\Documents\SandboxScripts\wsb-pkgs.ps1</Command>
+    </LogonCommand>
+
+    <!-- Audio and Video Input Configuration -->
+    <AudioInput>default</AudioInput>
+    <VideoInput>default</VideoInput>
+
+    <!-- Additional Configuration Options -->
+    <ProtectedClient>enable</ProtectedClient>
+    <ClipboardRedirection>default</ClipboardRedirection>
+    <MemoryInMB>81952</MemoryInMB>
+
+</Configuration>
