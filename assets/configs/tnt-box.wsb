@@ -1,0 +1,26 @@
+<Configuration>
+  <Metadata>
+    <Name>TNT-Box</Name>
+    <Author>robbpaulsen</Author>
+    <Description>Detona, Ejecuta software, scripts, funciones, programas, etc que sospeches puedan ser inseguros</Description>
+    <Updated>03/02/2025 10:39:22</Updated>
+  </Metadata>
+  <vGPU>Disable</vGPU>
+  <MemoryInMB>8192</MemoryInMB>
+  <AudioInput>Disable</AudioInput>
+  <VideoInput>Disable</VideoInput>
+  <ClipboardRedirection>Default</ClipboardRedirection>
+  <PrinterRedirection>Disable</PrinterRedirection>
+  <Networking>Disable</Networking>
+  <ProtectedClient>Enable</ProtectedClient>
+  <LogonCommand>
+    <Command>C:\Users\developer\.local\share\wsb-share\wsb-tnt.cmd</Command>
+  </LogonCommand>
+  <MappedFolders>
+    <MappedFolder>
+      <HostFolder>C:\Users\developer\.local\share\wsb-share</HostFolder>
+      <SandboxFolder>C:\shared</SandboxFolder>
+      <ReadOnly>False</ReadOnly>
+    </MappedFolder>
+  </MappedFolders>
+</Configuration>
