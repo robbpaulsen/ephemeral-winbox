@@ -21,6 +21,7 @@ function chkrole {
         exit 1
     }
 }
+chkrole
 
 function Update-PowerShell {
     Write-Output "`n⏳ Primero Actualizar el Sistema - " -ForegroundColor Yellow -NoNewline; Write-Output "[01]" -ForegroundColor Green -BackgroundColor Black
@@ -34,12 +35,14 @@ function Update-PowerShell {
         $modules = @(
             'PSWindowsUpdate',
             'MSCatalog',
-            'TerminalIcons'
+            'TerminalIcons',
+            'oh-my-posh-core',
+            'PSFzf'
         )
 
         foreach ($module in $modules) {
-            Install-Module -Name $module -Repository PSGallery -SkipPublisherCheck -Force
-            Import-Module -Name $module
+            Install-Module -Name $module -Repository PSGallery -Force
+            Import-Module -Name $module -Scope local -Force
         }
 
         # Download and install Windows updates
@@ -52,6 +55,7 @@ function Update-PowerShell {
         "`n⚠️ Error in line $($Error[0].InvocationInfo.ScriptLineNumber): $($Error[0])"
     }
 }
+Update-PowerShell
 
 function Enable-Containers {
     # Display a progress bar and status message
@@ -66,3 +70,4 @@ function Enable-Containers {
     -CurrentOperation (Enable-WindowsOptionalFeature -FeatureName "Containers-DisposableClientVM" -All -Online -NoRestart)
     Write-Progress -Completed
 }
+Enable-Containers
