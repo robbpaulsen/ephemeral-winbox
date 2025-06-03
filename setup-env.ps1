@@ -20,6 +20,8 @@ if (-not $IsAdmin) {
     exit 1
 }
 
+New-Item -Path C:\ -Name WindowsSandBox -ItemType Directory -
+
 try {
     Write-Output "`n⏳ Primero Actualizar el Sistema - " -ForegroundColor Yellow -NoNewline; Write-Output "[01]" -ForegroundColor Green -BackgroundColor Black
     $StopWatch = [System.Diagnostics.Stopwatch]::StartNew()
@@ -29,16 +31,16 @@ try {
 
     # Install required modules from PSGallery repository
     $modules = @(
-        'PSWindowsUpdate',
+        'BurntToast',
         'MSCatalog',
-        'TerminalIcons',
         'oh-my-posh-core',
-        'PSFzf',
-        'BurntToast'
+        'PSWindowsUpdate',
+        'TerminalIcons',
+        'WindowsSandboxTools'
     )
     foreach ($module in $modules) {
-        Install-Module -Name $module -Repository PSGallery -Force
-        Import-Module -Name $module -Scope local -Force
+        Install-Module -Name $module -Scope CurrentUser -AllowPrerelease -Repository PSGallery -Force
+        Import-Module -Name $module -Scope Local -Force
     }
 
     # Download and install Windows updates
